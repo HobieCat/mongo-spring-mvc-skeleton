@@ -50,7 +50,7 @@ public class EmployeeController {
 	private EmployeeRepository repository;
 
 	// which DAOFactory to use
-	private final int useDAOFacory = DAOFactory.MONGODB;
+	private final int useDAOFactory = DAOFactory.MONGODB;
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 
@@ -62,17 +62,17 @@ public class EmployeeController {
 	public ModelAndView getEmployees() {
 		/**
 		 * DAOFactory Object is casted to MongoDBDAOFactory because we need to
-		 * inject to Autowired repository
+		 * inject the Autowired repository
 		 */
-		DAOFactory theDAOFactory = DAOFactory.getDAOFactory(useDAOFacory);
-		if (useDAOFacory == DAOFactory.MONGODB) {
+		DAOFactory theDAOFactory = DAOFactory.getDAOFactory(useDAOFactory);
+		if (useDAOFactory == DAOFactory.MONGODB) {
 			/**
 			 * If using mongoDB, inject the repository object in DAOFactory
 			 */
 			((MongoDBDAOFactory) theDAOFactory).setRepository(repository);
 		}
 		/**
-		 * gets EmployeeDAO with repository Injection
+		 * gets EmployeeDAO
 		 */
 		EmployeeDAO employeeDAO = theDAOFactory.getEmployeeDAO();
 
