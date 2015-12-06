@@ -1,4 +1,4 @@
-# mongo-spring-mvc-skeleton
+# mongo-spring-mvc-skeleton [![Build Status](https://travis-ci.org/HobieCat/mongo-spring-mvc-skeleton.svg?branch=master)](https://travis-ci.org/HobieCat/mongo-spring-mvc-skeleton)
 This is a skeleton of a Java/Spring Tomcat application using mongoDB, far from being complete it just demonstrates the basic concpets and DAO implementations.
 
 ## Inspiration was taken from the following online guides and tutorials:
